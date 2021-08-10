@@ -10,7 +10,7 @@
 
 <p>Click the button to demonstrate the prompt box.</p>
 
-<button onclick="myFunction()">Try it</button>
+<button onclick="myPromptFunction()">Try it</button>
 
 <p id="prompt"></p>
 
@@ -26,12 +26,13 @@ function myFunction() {
   document.getElementById("demo").innerHTML = txt;
 }
 
-function myFunction() {
+function myPromptFunction() {
   var person = prompt("Please enter your name", "Harry Potter");
   if (person != null) {
     document.getElementById("prompt").innerHTML =
     "Hello " + person + "! How are you today?";
   }
+}
 </script>
 
 </body>
