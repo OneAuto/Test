@@ -5,6 +5,15 @@
 		},
 		{
 			"path": "../OneAuto.github.io"
+		},
+		{
+			"path": "../CoreJava"
+		},
+		{
+			"path": "../Selenium"
 		}
-	]
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic"
+	}
 }
