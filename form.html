@@ -41,6 +41,30 @@
       <label>Age:</label>
       <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>
       <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">13 or older</label>
+      <br>
+      <br>
+      <script type="text/javascript">
+        function EnableDisableTextBox() {
+            var chkYes = document.getElementById("chkYes");
+            var txtPassportNumber = document.getElementById("txtPassportNumber");
+            txtPassportNumber.disabled = chkYes.checked ? false : true;
+            if (!txtPassportNumber.disabled) {
+                txtPassportNumber.focus();
+            }
+        }
+    </script>
+    <span>Do you have Passport?</span>
+    <label for="chkYes">
+        <input type="radio" id="chkYes" name="chkPassPort" onclick="EnableDisableTextBox()" />
+        Yes
+    </label>
+    <label for="chkNo">
+        <input type="radio" id="chkNo" name="chkPassPort" onclick="EnableDisableTextBox()" />
+        No
+    </label>
+    <hr />
+    Passport Number:
+    <input type="text" id="txtPassportNumber" disabled="disabled" />
     </fieldset>
     
     <fieldset>
@@ -73,6 +97,7 @@
     
     </fieldset>
     <button type="submit">Sign Up</button>
+    <button id="cancel" disabled>Cancel</button>
   </form>
   
 </body>
