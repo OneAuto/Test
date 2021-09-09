@@ -1,90 +1,93 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Form</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
   <nav>
     <a href="index.html">Home</a> |
     <a href="form.html">Form</a> |
-    <a href="Alerts.html".html">Alerts</a> |
+    <a href="Alerts.html" .html">Alerts</a> |
     <a href="iframe.html">iFrames</a> |
     <a href="windows.html">Windows</a> |
     <a href="Actions.html">Actions</a> |
-    <a href="webtable.html">Web Tables</a> 
-    </nav>
+    <a href="webtable.html">Web Tables</a>
+  </nav>
   <form action="confirm.html" method="get">
-  
+
     <h1>Sign Up</h1>
-    
+
     <fieldset>
       <legend><span class="number">1</span>Your basic info</legend>
       <label for="name">Name:</label>
       <input type="text" id="name" name="user_name">
-      
+
       <label for="mail">Email:</label>
       <input type="email" id="mail" name="user_email">
-      
+
       <label for="password">Password:</label>
       <input type="password" id="password" name="user_password" class="passwordClass">
 
       <label for="link">Link:</label>
-     <a href="https://oneauto.github.io" target="_blank">Click here to launch OneAuto Home Page</a>
+      <a href="https://oneauto.github.io" target="_blank">Click here to launch OneAuto Home Page</a>
       <br>
       <br>
       <label>Age:</label>
-      <input type="radio" id="under_13" value="under_13" name="user_age" onclick="ShowHideDiv()"><label for="under_13" class="light">Under 13</label><br>
+      <input type="radio" id="under_13" value="under_13" name="user_age" onclick="ShowHideDiv()"><label for="under_13"
+        class="light">Under 13</label><br>
       <div id="dvtext" style="display: none">
-          Parent Name:
+        Parent Name:
         <input type="text" id="txtBox" />
-    </div>
-      <input type="radio" id="over_13" value="over_13" name="user_age" onclick="ShowHideDiv()"><label for="over_13" class="light">13 or older</label>
+      </div>
+      <input type="radio" id="over_13" value="over_13" name="user_age" onclick="ShowHideDiv()"><label for="over_13"
+        class="light">13 or older</label>
       <br>
       <br>
       <script type="text/javascript">
         function EnableDisableTextBox() {
-            var chkYes = document.getElementById("chkYes");
-            var txtPassportNumber = document.getElementById("txtPassportNumber");
-            txtPassportNumber.disabled = chkYes.checked ? false : true;
-            if (!txtPassportNumber.disabled) {
-                txtPassportNumber.focus();
-            }
+          var chkYes = document.getElementById("chkYes");
+          var txtPassportNumber = document.getElementById("txtPassportNumber");
+          txtPassportNumber.disabled = chkYes.checked ? false : true;
+          if (!txtPassportNumber.disabled) {
+            txtPassportNumber.focus();
+          }
         }
         function ShowHideDiv() {
-        var chkYes = document.getElementById("under_13");
-        var dvtext = document.getElementById("dvtext");
-        dvtext.style.display = under_13.checked ? "block" : "none";
-    }
-    </script>
-    
-    <span>Do you have Passport?</span>
-    <label for="chkYes">
+          var chkYes = document.getElementById("under_13");
+          var dvtext = document.getElementById("dvtext");
+          dvtext.style.display = under_13.checked ? "block" : "none";
+        }
+      </script>
+
+      <span>Do you have Passport?</span>
+      <label for="chkYes">
         <input type="radio" id="chkYes" name="chkPassPort" onclick="EnableDisableTextBox()" />
         Yes
-    </label>
-    <label for="chkNo">
+      </label>
+      <label for="chkNo">
         <input type="radio" id="chkNo" name="chkPassPort" onclick="EnableDisableTextBox()" />
         No
-    </label>
-    <hr />
-    Passport Number:
-    <input type="text" id="txtPassportNumber" disabled="disabled" />
+      </label>
+      <hr />
+      Passport Number:
+      <input type="text" id="txtPassportNumber" disabled="disabled" />
     </fieldset>
-    
+
     <fieldset>
       <legend><span class="number">2</span>Your profile</legend>
       <label for="bio">Biography:</label>
       <textarea id="bio" name="user_bio"></textarea>
     </fieldset>
     <fieldset>
-    <label for="job">Job Role:</label>
-    <select id="job" name="user_job">
+      <label for="job">Job Role:</label>
+      <select id="job" name="user_job">
         <option value="frontend_developer">Front-End Developer</option>
         <option value="php_developor">PHP Developer</option>
         <option value="python_developer">Python Developer</option>
@@ -98,17 +101,34 @@
         <option value="freelancer">Freelancer</option>
         <option value="secretary">Secretary</option>
         <option value="maintenance">Maintenance</option>
-    </select>
-    
+      </select>
+      <br>
+      
+      <label for="cars">What days are weekoff:</label>
+      <select id="weekoff" name="weekoff_days" multiple>  
+        <option value="sun">Sunday</option>  
+        <option value="mon">Monday</option>  
+        <option value="tue">Tuesday</option>  
+        <option value="wed">Webnesday</option>  
+        <option value="thu">Thursday</option>  
+        <option value="fri">Friday</option>  
+        <option value="sat">Saturday</option>  
+         
+      </select> 
+
       <label>Interests:</label>
-      <input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Development</label><br>
-        <input type="checkbox" id="design" value="interest_design" name="user_interest"><label class="light" for="design">Design</label><br>
-      <input type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light" for="business">Business</label>
-    
+      <input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light"
+        for="development">Development</label><br>
+      <input type="checkbox" id="design" value="interest_design" name="user_interest"><label class="light"
+        for="design">Design</label><br>
+      <input type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light"
+        for="business">Business</label>
+
     </fieldset>
     <button type="submit">Sign Up</button>
     <button id="cancel" disabled>Cancel</button>
   </form>
-  
+
 </body>
+
 </html>
